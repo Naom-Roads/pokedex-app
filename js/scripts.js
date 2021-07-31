@@ -5,4 +5,4 @@ let pokemonList = [
   { pokemon: 'Slowpoke', height: 1.2, types: ['Psychic', 'Water '] },
   { pokemon: 'Dewgong', height: 1.7, types: ['Ice', 'Water'] },
 
-];,
+];
