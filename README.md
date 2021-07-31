@@ -1,2 +1,13 @@
 # pokedex-app
-Displays list of Pokemon with information on each of them. 
+
+# Welcome to the Pokedex
+
+Displays list of Pokemon with the following:
+
+1. Name
+2. Description
+3. Type
+4. Special Power
+
+
+
