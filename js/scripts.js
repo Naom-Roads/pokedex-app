@@ -7,8 +7,13 @@ let pokemon = [
 
 ];
 
+
 for ( let i=0; i < pokemon.length ; i++ ) {
-  document.write(" " + pokemon[i].name + " (Height: " + pokemon[i].height + ")") ;
+  if (pokemon[i].height > 5 ) {
+    document.write("<div class='table'> " + pokemon[i].name + " (Height: " + pokemon[i].height + ") " + "<span> Wow that is a big pokemon! </span></div>")
+  } else {
+    document.write("<div class='table'> " + pokemon[i].name + " (Height: " + pokemon[i].height + ")</div>") ;
+  }
 }
 
 
