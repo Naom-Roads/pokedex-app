@@ -1,4 +1,4 @@
-let pokemon = [
+const pokemon = [
   { name: 'Bulbasaur', height: 7, types: ['Grass', 'Poison'] },
   { name: 'Squirtle', height: 5, types: 'Water' },
   { name: 'Wigglytuff', height: 1, types: ['Fairy', 'Normal'] },
