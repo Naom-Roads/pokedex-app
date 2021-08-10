@@ -23,12 +23,10 @@ const grassPokemon = [
 
 function printArray(list) {
   for (let i=0; i < list.length; i++) {
-    if (list[i].height > 5) {
-      document.write("<div class='grid-item'> " + list[i].name + " (Height: " + list[i].height + ") " + "<span> Wow that is a big pokemon! </span></div> <br>");
-    } else {
-      document.write("<div class='grid-item'> " + list[i].name + " (Height: " + list[i].height + ")</div> <br>");
-    }
-  }
+    const pokemonIsTall = list[i].height > 5; 
+      document.write(`<div class='grid-item'> ${list[i].name} (Height: ${list[i].height})
+      ${pokemonIsTall ? "<span> Wow that is a big pokemon! </span>" : ""} </div> <br>`);
+ }
 }
 
 document.write("<div class='grid'>");
