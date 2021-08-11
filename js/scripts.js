@@ -29,8 +29,12 @@ function getAll() {
 
 })();  
 
-document.write("<div class='grid'>");
+console.log(pokemonRepository.getAll()); 
+pokemonRepository.add({ name: 'Butterfree', height: 3, type: 'Bug' });
+console.log(pokemonRepository.getAll());
 
+
+document.write("<div class='grid'>");
 pokemonRepository.getAll().forEach(function(pokemon) {
   const pokemonIsTall = pokemon.height > 5; 
     document.write(`<div class='grid-item'> ${pokemon.name} (Height: ${pokemon.height})
