@@ -1,37 +1,47 @@
-
 body {
 
-    background-color: #8ecae6;
+    background-color: #ffb703;
+    margin: 0;
 }
 
-.navbar {
-    
-    background-color: #023047; 
-    color: white; 
+
+ul {
+    list-style: none;
 }
 
-.grid {
+.navbar h1 {
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    background-color: #023047;
+    color: white;
+}
 
-    display: flex;  
-    flex-wrap: wrap; 
-    gap: 10px; 
+.pokemon-list {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-  
+    justify-content: space-evenly;
+    gap: 10px;
 }
-
-/* .grid-item {
-
-} */
 
 .button-class {
-    width: 300px; 
-    background-color: none;
-    border: 1px solid violet;
-    padding: 10px; 
-    color:black; 
 
+    background-color: #219ebc;
+    border: 1px solid white;
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    width: 300px;
 }
 
-/* .button:hover {
 
-}  */
+.button-class:hover {
+    background-color: #8ecae6;
+    color: #023047;
+}
