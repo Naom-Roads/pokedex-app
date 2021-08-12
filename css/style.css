@@ -1,4 +1,17 @@
+
+body {
+
+    background-color: #8ecae6;
+}
+
+.navbar {
+    
+    background-color: #023047; 
+    color: white; 
+}
+
 .grid {
+
     display: flex;  
     flex-wrap: wrap; 
     gap: 10px; 
@@ -6,9 +19,19 @@
   
 }
 
-.grid-item {
-    width: 500px; 
+/* .grid-item {
+
+} */
+
+.button-class {
+    width: 300px; 
     background-color: none;
     border: 1px solid violet;
     padding: 10px; 
+    color:black; 
+
 }
+
+/* .button:hover {
+
+}  */
