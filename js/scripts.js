@@ -25,6 +25,9 @@ const pokemonRepository = (function () {
     return pokemonList;
   }
 
+  function showDetails(event) {
+    console.log(event.target.innerText);
+  }
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
@@ -34,13 +37,16 @@ const pokemonRepository = (function () {
     button.classList.add('button-class');
     pokemonItem.appendChild(button);
     pokemonList.appendChild(pokemonItem);
+    button.addEventListener('click', showDetails);
+
   }
 
 
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem
+    addListItem: addListItem,
+    showDetails: showDetails
 
 
   };
@@ -53,8 +59,11 @@ pokemonRepository.add({ name: 'Butterfree', height: 3, type: 'Bug' });
 pokemonRepository.add("coucou"); // testing pokemon is not an object 
 console.log(pokemonRepository.getAll());
 
+
+
 pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
+  pokemonRepository.addListItem(pokemon)
+
 });
 
 
