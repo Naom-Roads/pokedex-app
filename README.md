@@ -126,8 +126,5 @@ document.addEventListener('click', 'div', e => {
 })
 
 
-## Data Attributes
 
- * Data set will have all custom attributes, it will take data 
-   convert it and just show the value.
  

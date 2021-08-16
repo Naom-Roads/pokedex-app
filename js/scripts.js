@@ -3,16 +3,8 @@
 // Displays the name and height 
 
 const pokemonRepository = (function () {
-  let pokemonList = [
-    { name: 'Squirtle', height: 5, types: 'Water' },
-    { name: 'Dewgong', height: 1.7, types: ['Ice', 'Water'] },
-    { name: 'Slowpoke', height: 1.2, types: ['Psychic', 'Water '] },
-    { name: 'Alcremie', height: 1, types: 'Fairy' },
-    { name: 'Igglybuff', height: 1, types: 'Fairy' },
-    { name: 'Bulbasaur', height: 7, types: ['Grass', 'Poison'] },
-    { name: 'Chikorita', height: 2.11, types: 'Grass' },
-  ];
-
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
 
   function add(pokemon) {
@@ -25,9 +17,11 @@ const pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function showDetails(pokemonName) {
-    console.log(pokemonName);
-  }
+  function showDetails(pokemon) {
+    loadDetails(pokemon).then(function () {
+      console.log(pokemon);
+     });
+    }
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
@@ -37,42 +31,53 @@ const pokemonRepository = (function () {
     button.classList.add('button-class');
     pokemonItem.appendChild(button);
     pokemonList.appendChild(pokemonItem);
-    button.addEventListener('click', function() {showDetails(pokemon.name)} );
+    button.addEventListener('click', function() { showDetails(pokemon)} );
 
   }
 
+  function loadList() {
+    return fetch(apiUrl).then(function(response) {
+      return response.json(); 
+   }).then(function (json) {
+     json.results.forEach(function (item) {
+       let pokemon = {
+         name: item.name, 
+         detailsUrl: item.url
+       };
+       add(pokemon);
+     });
+    }).catch(function (e) {
+      console.error(e); 
+    });
+   }
+
+   function loadDetails(item) { 
+   let url= item.detailsUrl; 
+   return fetch(url).then(function (response) {
+     return response.json();
+   }).then(function (details) {
+     item.imageURL = details.sprites.front_default; 
+     item.height = details.height; 
+     item.types = details.types; 
+   }).catch(function (e) {
+      console.error(e); 
+    }); 
+   }
+
+   
 
   return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    showDetails: showDetails
+    add:add, 
+    getAll: getAll, 
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails,
+    addListItem: addListItem
+  }; 
+})(); 
 
-
-  };
-
-
-})();
-
-console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: 'Butterfree', height: 3, type: 'Bug' });
-pokemonRepository.add("coucou"); // testing pokemon is not an object 
-console.log(pokemonRepository.getAll());
-
-
-
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon)
-
-});
-
-
-
-
-
-// const pokemonIsTall = pokemon.height > 5; 
-    // document.write(`<div class='grid-item'> ${pokemon.name} (Height: ${pokemon.height})
-    // ${pokemonIsTall ? "<span> Wow that is a big pokemon! </span>" : ""} </div> <br>`);
-
-
-
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function(pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+}); 
