@@ -25,8 +25,8 @@ const pokemonRepository = (function () {
     return pokemonList;
   }
 
-  function showDetails(event) {
-    console.log(event.target.innerText);
+  function showDetails(pokemonName) {
+    console.log(pokemonName);
   }
 
   function addListItem(pokemon) {
@@ -37,7 +37,7 @@ const pokemonRepository = (function () {
     button.classList.add('button-class');
     pokemonItem.appendChild(button);
     pokemonList.appendChild(pokemonItem);
-    button.addEventListener('click', showDetails);
+    button.addEventListener('click', function() {showDetails(pokemon.name)} );
 
   }
 
