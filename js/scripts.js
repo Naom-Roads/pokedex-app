@@ -14,11 +14,11 @@ const pokemonRepository = (function () {
     message.classList.add('loading-class');
     message.classList.add('animate__animated', 'animate__flash');
     container.appendChild(message);
-  }
+  } // creates loading and class to show loading message in loadList and loadDetails function
 
   function hideLoadingMessage() {
   document.getElementById('loading').style.display = 'none'; 
-  }
+  } // clears the message once content is loaded 
 
   function add(pokemon) {
     if (typeof pokemon === "object") {
