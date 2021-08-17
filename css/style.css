@@ -27,6 +27,7 @@ ul {
 }
 
 
+
 /* Pokemon List */
 
 .pokemon-list {
@@ -58,6 +59,17 @@ ul {
     background-color: #8ecae6;
     color: #023047;
 }
+
+.loading-class {
+    display: block;
+    border: 2px solid #023047;
+    margin: 0 auto;
+    padding: 10px; 
+    font-size: larger;
+    font-family: 'Lato', sans-serif;
+}
+
+
 
 
 /* ------ Responsive Classes ------- */
