@@ -8,12 +8,12 @@ const pokemonRepository = (function () {
 
   function showLoadingMessage() {
     let container = document.querySelector('.main');
-    let message = document.createElement('div')
-    message.id = "loading"
-    message.innerText = "Loading..."
-    message.classList.add('loading-class');
-    message.classList.add('animate__animated', 'animate__flash');
-    container.appendChild(message);
+    let loadmessage = document.createElement('div')
+    loadmessage.id = "loading"
+    loadmessage.innerText = "Loading..."
+    loadmessage.classList.add('loading-class');
+    loadmessage.classList.add('animate__animated', 'animate__flash');
+    container.appendChild(loadmessage);
   } // creates loading and class to show loading message in loadList and loadDetails function
 
   function hideLoadingMessage() {
@@ -163,7 +163,7 @@ pokemonRepository.loadList().then(function () {
       function validateForm() {
         let isValidEmail = validateEmail();
         let isValidPassword = validatePassword();
-        return validateEmail() && validatePassword();
+        return isValidEmail() && isValidPassword();
       }
 
 
