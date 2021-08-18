@@ -64,10 +64,8 @@ function loadList() {
       };
       add(pokemon);
     }); 
+  }).catch(console.log).finally(function() {
     hideLoadingMessage()
-  }).catch(function (e) {
-    hideLoadingMessage()
-    console.error(e);
   });
 }
 
@@ -80,10 +78,8 @@ function loadDetails(item) {
     item.imageURL = details.sprites.front_default;
     item.height = details.height;
     item.types = details.types;
+  }).catch(console.log).finally(function () {
     hideLoadingMessage()
-  }).catch(function (e) {
-    hideLoadingMessage()
-    console.error(e);
   });
 }
 
