@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
@@ -14,25 +15,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Pokedex</title>
 </head>
 
 <body>
+
     <section class='navbar'>
         <h1>POKEDEX</h1>
     </section>
-    
+    <section>
 
-    <section class="main">
-        <ul class='pokemon-list'> </ul>
+        <form id='register-form' class='register-form'>
+
+            <div class='input-wrapper'>
+                <label for="email">E-mail</label>
+                <input id='email'>
+            </div>
+
+            <div class='input-wrapper'>
+                <label for='password'>Password</label>
+                <input id='password' type='password'>
+            </div>
+
+<button>Register</button>
+
+        </form>
+
+
     </section>
 
 
-    <footer> </footer>
 
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>
+
+    <footer> </footer>
 </body>
 
 </html>
