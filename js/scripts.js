@@ -101,83 +101,60 @@ pokemonRepository.loadList().then(function () {
   });
 });
 
-// Email Validation with Error Handling
+// Modal JS 
 
-(function () {
-    let form = document.querySelector('#register-form');
-    let emailInput = document.querySelector('#email');
-    let passwordInput = document.querySelector('#password');
+function showModal(title, text) {
+  let modalContainer = document.querySelector('#modal-container');
 
-    function showErrorMessage(input, message) {
-      let container = input.parentElement; // The .input-wrapper
+  //Clear Existing Modal Content 
+  modalContainer.innerHTML = '';
 
-      //Removes existing error 
-      let error = container.querySelector('.error-message');
-      if (error) {
-        container.removeChild(error); 
-     }
+  let modal = document.createElement('div');
+  modal.classList.add('modal');
 
-     // Adds error if message is not empty
-     if (message) {
-       let error = document.createElement('div');
-      error.classList.add('error-message');
-      error.innerText = message;
-      container.appendChild(error);
+
+  // Add the new Modal Content 
+  let closeButtonElement = document.createElement('button');
+  closeButtonElement.classList.add('modal-close');
+  closeButtonElement.innerText = 'Close';
+  closeButtonElement.addEventListener('click', hideModal); 
+  window.addEventListener('keydown', (e) => {
+    let modalContainer = document.querySelector('#modal-container'); 
+    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+      hideModal(); 
     }
-  }
+  })
 
-    function validateEmail() {
-      let value = emailInput.value;
-
-    if (!value) {
-      showErrorMessage(emailInput, 'Email is a required field.');
-      return false;
+  modalContainer.addEventListener('click', (e) => {
+    // This is also triggered when clickin inside the Modal 
+    //We only want to close if the user clicks directly on the overlay
+    let target = e.target; 
+    if (target === modalContainer) {
+      hideModal();
     }
+  }); 
 
-    if (value.indexOf('@') === -1) {
-      showErrorMessage(emailInput, 'You must enter a valid email address.');
-      return false;
-    }
+  let titleElement = document.createElement('h1');
+  titleElement.innerText = title;
 
-    showErrorMessage(emailInput, null); 
-      return true;
-    }
-
-    function validatePassword() {
-      let value = passwordInput.value;
-
-    if (!value) {
-      showErrorMessage(passwordInput, 'Password is a required field.');
-      return false;
-    }
-
-    if (value.length < 8) {
-        showErrorMessage(passwordInput, 'The password needs to be at least 8 characters long.');
-        return false;
-      }
-
-      showErrorMessage(passwordInput, null); 
-        return true;
-      }
-
-      function validateForm() {
-        let isValidEmail = validateEmail();
-        let isValidPassword = validatePassword();
-        return isValidEmail() && isValidPassword();
-      }
+  let contentElement = document.createElement('p');
+  contentElement.innerText = text;
 
 
-      form.addEventListener('submit', (e) => {
-        e.preventDefault(); // DO not submit to server
-        if (validateForm()) {
-          alert('Success!');
-        }
-      }); 
+  modal.appendChild(closeButtonElement);
+  modal.appendChild(titleElement);
+  modal.appendChild(contentElement);
+  modalContainer.appendChild(modal);
 
-      emailInput.addEventListener('input', validateEmail); 
-      passwordInput.addEventListener('input', validatePassword);
-    })();
-    
+  modalContainer.classList.add('is-visible');
+}
 
-       
-  
+document.querySelector('#show-modal').addEventListener('click',
+  () => {
+    showModal('Modal Title', 'This is the modal content!');
+  });
+
+  function hideModal() {
+    let modalContainer = document.querySelector('#modal-container'); 
+    modalContainer.classList.remove('is-visible'); 
+  } 
