@@ -107,7 +107,6 @@ label {
     -webkit-appearance: none; 
     border:0;
     background: rgb(197, 196, 196);
-    box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
 }
 
 .modal h1 {
