@@ -2,12 +2,14 @@
 
 # Welcome to the Pokedex
 
-Displays list of Pokemon with the following:
+Displays list of Pokemon with a Modal that will have the following:
 
 1. Name
 2. Description
 3. Type
 4. Height
+5. Image 
+
 
 
 Notes: 
