@@ -124,8 +124,6 @@ label {
     display: block;
     margin-bottom: 0;
     box-sizing: content-box;
-    border: 
-    background-color: red; 
     color: black; 
     padding: 10px; 
 }
@@ -171,7 +169,7 @@ label {
     height: 50px;
     justify-content: center;
   }
-}
+
 
 
 .button-class:hover {
