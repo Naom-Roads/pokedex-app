@@ -148,16 +148,11 @@ const pokemonRepository = (function () {
 
     // Hides Container 
 
-    let dialogPromiseReject;
+   
     let modalContainer = document.querySelector('#modal-container');
 
     function hideModal() {
       modalContainer.classList.remove('is-visible');
-
-      if (dialogPromiseReject) {
-        dialogPromiseReject();
-        dialogPromiseReject = null;
-      }
     }
 
     // MODAL ENDS // 
