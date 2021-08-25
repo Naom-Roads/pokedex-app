@@ -3,7 +3,7 @@
 
 const pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit#=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   // LOADING MESSAGE //
 
@@ -115,7 +115,6 @@ const pokemonRepository = (function () {
 
       const titleElement = document.createElement('h1');
       titleElement.innerText = pokemon.name;
-      
       
       const imageElement = document.createElement('img');
       imageElement.src = pokemon.imageURL;
