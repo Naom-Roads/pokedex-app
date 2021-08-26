@@ -19,18 +19,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Pokedex</title>
 </head>
 
 <body>
-    <div class="shadow-lg p-3 mb-5 bg-body">
-        <section class="navbar">
-            <a class="navbar-brand" href="https://naom-roads.github.io/pokedex-app/">
-                <h1>POKEDEX</h1>
-            </a>
-        </section>
-    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://naom-roads.github.io/pokedex-app/">POKEDEX</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" target ="_blank" href="https://www.pokemon.com/us/pokemon-news/">PokeNews</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="https://www.pokemon.com/us/pokemon-episodes/">PokemonTV</a></li>
+                  <li><a class="dropdown-item" href="https://www.pokemon.com/us/pokemon-tcg/">Trading Cards</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.pokemon.com/us/pokemon-video-games/">VideoGames</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success col" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+<!-- NAVBAR ENDS -->
 
     <!-- Loading message goes here -->
     <section class="main">
