@@ -43,10 +43,10 @@ const pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('#list-group');
     let pokemonItem = document.createElement('li');
-    pokemonItem.classList.add('list-group-item', 'col-3', 'd-flex', 'justify-content-center', 'border-0');
+    pokemonItem.classList.add('list-group-item', 'col-md-3', 'col-sm-6', 'd-flex', 'justify-content-center', 'border-0');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('btn', 'btn-warning', 'btn-lg', 'text-capitalize', 'col'); // replace with 'button-class' for custom buttons 
+    button.classList.add('btn', 'btn-warning', 'btn-lg', 'text-uppercase', 'fw-normal', 'col'); // replace with 'button-class' for custom buttons 
     button.setAttribute('data-bs-toggle', 'modal');
     button.setAttribute('data-bs-target', '#modal')
     pokemonItem.appendChild(button);
@@ -103,7 +103,7 @@ const pokemonRepository = (function () {
 
    
       const titleElement = document.createElement('h5');
-      titleElement.classList.add('modal-title', 'text-capitalize')
+      titleElement.classList.add('modal-title', 'text-capitalize', 'fs-2')
       titleElement.innerText = pokemon.name;
       
       const imageElement = document.createElement('img');
