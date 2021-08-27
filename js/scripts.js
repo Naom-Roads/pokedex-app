@@ -89,7 +89,6 @@ const pokemonRepository = (function () {
     });
   }
 
-
   // MODAL STARTS HERE //  
 
   function showDetails(pokemon) {
@@ -128,11 +127,8 @@ const pokemonRepository = (function () {
       contentBody.appendChild(typesElement);
 
     });
-
-    // MODAL ENDS // 
-
-    // Closing MODAL // 
   }
+  // MODAL ENDS // 
 
   return {
     add: add,
@@ -142,8 +138,10 @@ const pokemonRepository = (function () {
   };
 })(); // makes methods accessible outside of IIFE
 
+
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
+
   });
 });
