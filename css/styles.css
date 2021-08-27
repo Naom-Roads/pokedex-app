@@ -23,6 +23,11 @@ ul {
   color: white;
 }
 
+.nav-link {
+  color: white; 
+  
+}
+
 /* Registration/Sign-in Form */
 
 .register-form {
