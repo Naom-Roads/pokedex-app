@@ -21,7 +21,7 @@ const pokemonRepository = (function () {
     const container = document.querySelector('.main');
     const loadmessage = document.getElementById("loading");
     container.removeChild(loadmessage);
-   
+
   } // clears the message once content is loaded 
 
 
@@ -94,24 +94,24 @@ const pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-   
+
       const modalHeader = document.getElementById('modal-header');
-      modalHeader.innerHTML = ''; 
+      modalHeader.innerHTML = '';
       const contentBody = document.getElementById('modal-body');
-      contentBody.innerHTML = ''; 
+      contentBody.innerHTML = '';
       // Modal Content 
 
-   
+
       const titleElement = document.createElement('h5');
       titleElement.classList.add('modal-title', 'text-capitalize', 'fs-2')
       titleElement.innerText = pokemon.name;
-      
+
       const imageElement = document.createElement('img');
       imageElement.classList.add('img-thumbnail');
       imageElement.src = pokemon.imageURL;
 
       const typesElement = document.createElement('ul');
-  
+
       const heightElement = document.createElement('li');
       heightElement.innerText = `Height: ${pokemon.height}`;
       typesElement.append(heightElement);
@@ -120,13 +120,13 @@ const pokemonRepository = (function () {
         const typeElement = document.createElement('li')
         typeElement.innerText = `Type: ${type.type.name}`;
         typesElement.appendChild(typeElement);
-       
+
       }
-     
+
       modalHeader.prepend(titleElement);
       contentBody.appendChild(imageElement);
       contentBody.appendChild(typesElement);
-      
+
     });
 
     // MODAL ENDS // 
@@ -147,5 +147,3 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-

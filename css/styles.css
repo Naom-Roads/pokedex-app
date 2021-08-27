@@ -1,120 +1,94 @@
-
-
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 
 body {
-
-    background-color: #ffb703;
-    margin: 0;
+  background-color: #ffb703;
+  margin: 0;
 }
-
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
 
 .navbar {
-background-color:  #023047;
-
+  background-color: #023047;
 }
 .navbar-brand {
-    font-family: 'Oswald', sans-serif;
-    font-size: 50px;
-    color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  color: white;
 }
 
 /* Registration/Sign-in Form */
 
 .register-form {
-   margin-top: 50px;
-   padding: 20px;
-
+  margin-top: 50px;
+  padding: 20px;
 }
 
 .input-wrapper {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 label {
-
-    display: inline-block;
-    min-width: 100px;
-
+  display: inline-block;
+  min-width: 100px;
 }
 
 .error-message {
-    color: red;
-    font-size: 0.8em;
+  color: red;
+  font-size: 0.8em;
 }
-
 
 /* Modal */
 
-
-
 .modal-content {
-    
-    box-sizing: border-box;
-    border: 10px solid #219ebc ;
-    border-radius: 10%;
-    border-image: fill; 
-    font-family: 'lato', sans-serif;
-    box-shadow: 10px 10px 20px #3e4142, -10px -10px 50px #414344 ; 
+  box-sizing: border-box;
+  border: 10px solid #219ebc;
+  border-radius: 10%;
+  border-image: fill;
+  font-family: "lato", sans-serif;
+  box-shadow: 10px 10px 20px #3e4142, -10px -10px 50px #414344;
 }
 
-
-
-.btn { 
-
-box-shadow: 
-    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+.btn {
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   border-radius: 50px;
-
-
 }
 
 .list-group-item {
-   background-color: #ffb703;
-
-
+  background-color: #ffb703;
 }
-
-
 
 /* Pokemon List */
 
-
 .button {
-   
-    background-color: #219ebc;
-    border-radius: 30%;
-    font-family: 'Lato', sans-serif;
-    font-size: large;
-    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
-    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    height: 50px;
-    justify-content: center;
-  }
-
-
-.loading-class {
-    display: block;
-    border: 2px solid #023047;
-    margin: 0 auto;
-    padding: 10px;
-    font-size: larger;
-    font-family: 'Lato', sans-serif;
+  background-color: #219ebc;
+  border-radius: 30%;
+  font-family: "Lato", sans-serif;
+  font-size: large;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.22),
+    rgba(255, 255, 255, 0.25)
+  );
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  height: 50px;
+  justify-content: center;
 }
 
-
-
+.loading-class {
+  display: block;
+  border: 2px solid #023047;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: larger;
+  font-family: "Lato", sans-serif;
+}
