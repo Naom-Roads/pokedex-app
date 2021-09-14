@@ -32,7 +32,7 @@ Displays list of Pokemon with a Modal that will have the following:
 
 * Add Pagination - Currently app loads 150 Pokemon instances at a time. It would be better if we loaded fewer pokemon and allowed the user to go to another page to load more 
 
-* Add Search, it appears that this has not been added to the API documentation but there might be a way to create a function that compares the ids with the pokemon.name entered in the search. It would be limited but would be an great feature update as there are hundreds of pokemon and being able to search would greatly improve user experience. 
+* Add Search, it appears that this has not been added to the API documentation but there might be a way to create a function that compares the ids with the pokemon.name entered in the search. It would be limited but would be an great feature update as there are hundreds of pokemon and being able to search would greatly improve user experience. (DONE)
 
 
 
