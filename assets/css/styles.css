@@ -15,7 +15,7 @@ ul {
 }
 
 .navbar {
-  background-color: #023047;
+  background-color: #243560;
 }
 .navbar-brand {
   font-family: "Oswald", sans-serif;
@@ -64,10 +64,13 @@ label {
   box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   border-radius: 50px;
+  
 }
 
 .list-group-item {
   background-color: #ffb703;
+  display: flex; 
+  
 }
 
 /* Pokemon List */

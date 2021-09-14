@@ -1,13 +1,17 @@
 // Iterates through list and checks to see if height is greater than 5
 // Displays the name and height 
 
-const pokemonRepository = (function () {
+const pokemonRepository = (() => {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150&offset=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
 
   // LOADING MESSAGE //
 
-  function showLoadingMessage() {
+
+// Creates loading and class to show loading message in loadList and loadDetails function
+  
+function showLoadingMessage() {
     let container = document.querySelector('.main');
     let loadmessage = document.createElement('div')
     loadmessage.id = "loading"
@@ -15,35 +19,74 @@ const pokemonRepository = (function () {
     loadmessage.classList.add('loading-class');
     loadmessage.classList.add('animate__animated', 'animate__flash');
     container.prepend(loadmessage);
-  } // creates loading and class to show loading message in loadList and loadDetails function
+  } 
+
+
+// Clears the message once content is loaded 
 
   function hideLoadingMessage() {
     const container = document.querySelector('.main');
     const loadmessage = document.getElementById("loading");
     container.removeChild(loadmessage);
 
-  } // clears the message once content is loaded 
+  } 
 
 
-  // END OF LOADING MESSAGE CODE // 
+// -------- END OF LOADING MESSAGE CODE ------// 
 
   // ADDING AND GETTING POKEMON DETAILS // 
+
+
+  // Checks that pokemon is an object 
 
   function add(pokemon) {
     if (typeof pokemon === "object") {
       pokemonList.push(pokemon);
     }
-  } // checks that pokemon is an object 
+  } 
 
+
+  // Retrieve Pokemon Database
   function getAll() {
     return pokemonList;
-  } // returns pokemon list 
+  }
 
+
+
+  //Search DB by name, needs to be IIFE 
+
+  (function search() {
+
+    document.getElementById('search').addEventListener('input', searchFunction);
+
+    function searchFunction() {
+     
+      let search = document.getElementById('search').value.toLowerCase();
+   
+      // Creates an array and hides non-matching items
+
+      let arr = Array.from(document.getElementsByClassName('list-group-item'));
+
+      arr.forEach((elem) => {
+
+        if (search.length === 0 || elem.innerText.toLowerCase().includes(search)) {
+          elem.style.display = 'flex';
+        } else if (!elem.innerText.toLowerCase().includes(search)) {
+          elem.style.display = 'none';
+        }
+      });
+    }
+  })();
+
+// Adds pokemon to list with appropriate classes 
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('#list-group');
     let pokemonItem = document.createElement('li');
-    pokemonItem.classList.add('list-group-item', 'col-md-3', 'col-sm-6', 'd-flex', 'justify-content-center', 'border-0');
+    pokemonItem.classList.add('list-group-item', 'col-md-3', 'col-sm-6', 'justify-content-center', 'border-0');
+    
+    // Button to get modal with Pokemon information
+    
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add('btn', 'btn-warning', 'btn-lg', 'text-uppercase', 'fw-normal', 'col'); // replace with 'button-class' for custom buttons 
@@ -75,6 +118,7 @@ const pokemonRepository = (function () {
   }
 
   function loadDetails(item) {
+
     console.log(item);
     showLoadingMessage()
     let url = item.detailsUrl;
@@ -92,6 +136,7 @@ const pokemonRepository = (function () {
   // MODAL STARTS HERE //  
 
   function showDetails(pokemon) {
+
     loadDetails(pokemon).then(function () {
 
       const modalHeader = document.getElementById('modal-header');
