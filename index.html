@@ -35,7 +35,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,13 +54,11 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-light" target="_blank" href="https://www.pokemon.com/us/pokemon-news/">PokeNews</a>
+                        <a class="nav-link fw-light" target="_blank"
+                            href="https://www.pokemon.com/us/pokemon-news/">PokeNews</a>
                     </li>
                 </ul>
-                <form class="d-flex" >
-                    <input class="form-control me-2" id ="search" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline btn-light shadow-sm col" type="submit">Search</button>
-                </form>
+               
             </div>
         </div>
     </nav>
@@ -68,7 +66,20 @@
     <!-- NAVBAR ENDS -->
 
     <!-- Loading message goes here -->
+
     <section class="main">
+
+        <div class='images'>
+            <img class="image-fluid float-right text-center" id='pokemon-art' src="assets/images/suicune.png"
+                alt="3d photo of pokemon">
+
+                <form class="search">
+                    <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                
+            <img class="image-fluid float-right" id='pokemon-art' src="assets/images/Support_Lapras.png"
+                alt="3d photo of pokemon">
+        </div>
 
     </section>
 
@@ -77,6 +88,8 @@
         <ul id="list-group"
             class="list-group list-group-horizontal row flex-wrap justify-content-evenly rounded gap-3 pt-5 m-2"> </ul>
     </div>
+
+
 
     <!-- Pop up Modal Section  -->
 
@@ -102,16 +115,16 @@
 
     <footer> </footer>
 
-   
-   
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
-     <script src="js/promise-polyfill.js"></script>
-     <script src="js/fetch-polyfill.js"></script>
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
     <script src="dist/script.min.js"></script>
 </body>
 
