@@ -13,7 +13,6 @@
 ## User Goals
 
 Users should be able to view a list of data and see more details for a given data item on demand.
-
 Displays list of Pokemon with a Modal that will have the following:
 
 1. Name
@@ -39,10 +38,14 @@ Displays list of Pokemon with a Modal that will have the following:
 * Checked and cleared all errors using eslint and w3C validator. 
 * Tested on other browers and using different Explorer, Chrome and Edge
 * App is responsive and has been tested on different sized devices using different network speeds. 
+* Loading indicator 
 
 ### Technologies used 
 
-* 
+* Javascript, HTML and CSS
+* BootStrap
+* Pokemon API
+* ESLINT
 
 
 
