@@ -2,6 +2,18 @@
 
 # Welcome to the Pokedex
 
+## Key Features
+
+* Loads Data from Pokemon API, information on how to use API can be found here https://pokeapi.co/
+* Users can view list of Pokemon
+* Users can view details and stats of each pokemon by clicking on them
+* Users can search for Pokemon by name
+
+
+## User Goals
+
+Users should be able to view a list of data and see more details for a given data item on demand.
+
 Displays list of Pokemon with a Modal that will have the following:
 
 1. Name
@@ -18,21 +30,19 @@ Displays list of Pokemon with a Modal that will have the following:
 #ffb703 Mustard Yellow
 #fb8500 Tangerine Orange
 
-# Phase 1 (Complete)
 
-* Built main html page that displays all pokemon on a list
-* Indivual Pokemon can be clicked on to display stats 
-* Used vanilla JS to pull information from the API then minified to ensure  it's not too resource intensive. 
-* Added bootstrap and some custom styles so that it had the responsiveness and accesibility that comes with bootstraps features but still had a personal touch so that it looks unique in comparison to basic bootstrap modules. 
-* Checked and cleared all errors using eslint and w3C validator. Tested on other browers and using different Explorer, Chrome and Edge, also tested on different size devices using different network speeds. App worked as expected and didn't lag for too long on slower internet speeds.  
+### Technical Information and Requirements Met
 
+* Uses minified JS to pull information from the Pokemon API in a non resource intensive way
+* JS code is formatted with prettier according to ESLint Rules 
+* Bootstrap is used for basic styling, however additional custom styling was added using CSS
+* Checked and cleared all errors using eslint and w3C validator. 
+* Tested on other browers and using different Explorer, Chrome and Edge
+* App is responsive and has been tested on different sized devices using different network speeds. 
 
+### Technologies used 
 
-# Phase 2 (TBD)
-
-* Add Pagination - Currently app loads 150 Pokemon instances at a time. It would be better if we loaded fewer pokemon and allowed the user to go to another page to load more 
-
-* Add Search, it appears that this has not been added to the API documentation but there might be a way to create a function that compares the ids with the pokemon.name entered in the search. It would be limited but would be an great feature update as there are hundreds of pokemon and being able to search would greatly improve user experience. (DONE)
+* 
 
 
 
