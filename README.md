@@ -21,7 +21,7 @@ Displays list of Pokemon with a Modal that will have the following:
 4. Height
 5. Image 
 
-# Color Scheme 
+## Color Scheme 
  
 #8ecae6 Lighter Blue 
 #219ebc Light Blue
