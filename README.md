@@ -2,6 +2,8 @@
 
 # Welcome to the Pokedex
 
+<img width="1340" alt="pokemon" src="https://user-images.githubusercontent.com/44932790/158060013-06c99b38-0197-42e9-8639-4b329e4fa4fa.png">
+
 ## Key Features
 
 * Loads Data from Pokemon API, information on how to use API can be found here https://pokeapi.co/
@@ -49,6 +51,7 @@ Displays list of Pokemon with a Modal that will have the following:
 
 
 
+![Wondershare UniConverter 13_000009](https://user-images.githubusercontent.com/44932790/158060162-6e938690-a135-487a-a588-51a869c1efbf.GIF)
 
 
 
